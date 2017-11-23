@@ -1,65 +1,112 @@
-import { Dimensions } from 'react-native'
-const { height, width } = Dimensions.get('window')
+import variables from '../../styles/default';
 export default {
-  main: {
-    marginLeft: 15,
-    marginRight: 15,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  text: {
-    color: 'white',
-    textAlign: 'center',
-    padding: 8,
-    flexDirection: 'row',
-    fontSize: 18,
-  },
-  style: {
-    normal: {
-      borderRadius: 2,
+    container: {
+        flexDirection: 'row',
     },
-    rightAngle: {
-      width: '100%'
-    }
-  },
-  normalStyleWrapper: {
-    borderRadius: 2,
-  },
-  rightAngleStyleWrapper: {
-    width: '100%'
-  },
-  primaryRoleWrapper: {
-    backgroundColor: '#f8402f',
-  },
-  primaryRoleActiveWrapper: {
-    backgroundColor: '#e31300'
-  },
-  secondaryRoleWrapper: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    backgroundColor: '#fff'
-  },
-  secondaryActiveWrapper: {
-    backgroundColor: '#ccc'
-  },
-  role: {
-    primary: {
-      backgroundColor: '#f8402f',
+    defaultHighlight: {
+        backgroundColor: variables.fill_tap,
+        borderColor: variables.border_color_base,
     },
-    primaryActive: {
-      backgroundColor: '#e31300'
+    primaryHighlight: {
+        backgroundColor: variables.primary_button_fill_tap,
+        borderColor: variables.primary_button_fill,
     },
-    secondary: {
-      borderWidth: 1,
-      borderColor: '#ddd',
-      backgroundColor: '#fff'
+    ghostHighlight: {
+        backgroundColor: 'transparent',
+        borderColor: variables.ghost_button_fill_tap,
     },
-    secondaryActive: {
-      backgroundColor: '#ccc'
-    }
-  },
-  primary: {
-    backgroundColor: '#cdcdcd',
-    color: 'white',
-  }
-}
+    warningHighlight: {
+        backgroundColor: variables.warning_button_fill_tap,
+        borderColor: variables.warning_button_fill,
+    },
+    wrapperStyle: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: variables.radius_md,
+        borderWidth: 1,
+    },
+    largeRaw: {
+        height: variables.button_height,
+        paddingLeft: variables.h_spacing_lg,
+        paddingRight: variables.h_spacing_lg,
+    },
+    smallRaw: {
+        height: variables.button_height_sm,
+        paddingLeft: variables.h_spacing_sm,
+        paddingRight: variables.h_spacing_sm,
+    },
+    defaultRaw: {
+        backgroundColor: variables.fill_base,
+        borderColor: variables.border_color_base,
+    },
+    primaryRaw: {
+        backgroundColor: variables.primary_button_fill,
+        borderColor: variables.primary_button_fill,
+    },
+    ghostRaw: {
+        backgroundColor: 'transparent',
+        borderColor: variables.ghost_button_color,
+    },
+    warningRaw: {
+        backgroundColor: variables.warning_button_fill,
+        borderColor: variables.warning_button_fill,
+    },
+    defaultDisabledRaw: {
+        backgroundColor: variables.fill_disabled,
+        borderColor: variables.fill_disabled,
+    },
+    primaryDisabledRaw: {
+        opacity: 0.4,
+    },
+    ghostDisabledRaw: {
+        borderColor: `${variables.color_text_base}1A`,
+    },
+    warningDisabledRaw: {
+        opacity: 0.4,
+    },
+    defaultHighlightText: {
+        color: variables.color_text_base,
+    },
+    primaryHighlightText: {
+        color: `${variables.color_text_base_inverse}4D`,
+    },
+    ghostHighlightText: {
+        color: variables.ghost_button_fill_tap,
+    },
+    warningHighlightText: {
+        color: `${variables.color_text_base_inverse}4D`,
+    },
+    largeRawText: {
+        fontSize: variables.button_font_size,
+    },
+    smallRawText: {
+        fontSize: variables.button_font_size_sm,
+    },
+    defaultRawText: {
+        color: variables.color_text_base,
+    },
+    primaryRawText: {
+        color: variables.color_text_base_inverse,
+    },
+    ghostRawText: {
+        color: variables.ghost_button_color,
+    },
+    warningRawText: {
+        color: variables.color_text_base_inverse,
+    },
+    defaultDisabledRawText: {
+        color: `${variables.color_text_base}4D`,
+    },
+    primaryDisabledRawText: {
+        color: `${variables.color_text_base_inverse}99`,
+    },
+    ghostDisabledRawText: {
+        color: `${variables.color_text_base}1A`,
+    },
+    warningDisabledRawText: {
+        color: `${variables.color_text_base_inverse}99`,
+    },
+    indicator: {
+        marginRight: variables.h_spacing_md,
+    },
+};

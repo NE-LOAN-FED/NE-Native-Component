@@ -6,16 +6,32 @@ import {
   View,
 } from 'react-native'
 import { SafeAreaView } from 'react-navigation'
-import { Button } from '../../src'
+import {
+  Button,
+  WhiteSpace,
+  SideBlank
+} from '../../src'
 export default class ButtonScreen extends React.Component {
-  render() {
+  render () {
     return (
       <SafeAreaView style={style.container}>
-        <Text>这是button的页面</Text>
-        <View>
-          <Button>Button Primary</Button>
-          <Button role='secondary'>Button Secondary</Button>
-        </View>
+        <SideBlank>
+          <Text>这是button的页面</Text>
+          <View>
+            <WhiteSpace />
+            <Button>default</Button><WhiteSpace />
+            <Button disabled>default disabled</Button><WhiteSpace />
+
+            <Button type="primary">primary</Button><WhiteSpace />
+            <Button type="primary" disabled>primary disabled</Button><WhiteSpace />
+
+            <Button type="warning">warning</Button><WhiteSpace />
+            <Button type="warning" disabled>warning disabled</Button><WhiteSpace />
+
+            <Button loading>loading button</Button>
+
+          </View>
+        </SideBlank>
       </SafeAreaView>
     )
   }
@@ -28,8 +44,8 @@ ButtonScreen.navigationOptions = {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    // flexDirection: 'column',
+    // justifyContent: 'center',
+    // alignItems: 'center'
   }
 })
