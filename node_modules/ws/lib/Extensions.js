@@ -20,13 +20,7 @@ function parse(value) {
   value.split(',').forEach(function(v) {
     var params = v.split(';');
     var token = params.shift().trim();
-
-    if (extensions[token] === undefined) {
-      extensions[token] = [];
-    } else if (!extensions.hasOwnProperty(token)) {
-      return;
-    }
-
+    var paramsList = extensions[token] = extensions[token] || [];
     var parsedParams = {};
 
     params.forEach(function(param) {
@@ -44,15 +38,10 @@ function parse(value) {
           value = value.slice(0, value.length - 1);
         }
       }
-
-      if (parsedParams[key] === undefined) {
-        parsedParams[key] = [value];
-      } else if (parsedParams.hasOwnProperty(key)) {
-        parsedParams[key].push(value);
-      }
+      (parsedParams[key] = parsedParams[key] || []).push(value);
     });
 
-    extensions[token].push(parsedParams);
+    paramsList.push(parsedParams);
   });
 
   return extensions;

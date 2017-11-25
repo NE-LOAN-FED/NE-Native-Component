@@ -22,7 +22,7 @@ export default {
     wrapperStyle: {
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: variables.radius_md,
+        borderRadius: variables.radius_xs,
         borderWidth: 1,
     },
     largeRaw: {

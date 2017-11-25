@@ -9,10 +9,20 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Entypo'
 import { SafeAreaView, StackNavigator } from 'react-navigation';
+
 import ButtonScreen from './views/ButtonScreen'
+import ActionSheetScreen from './views/ActionSheetScreen'
+import AlertScreen from './views/AlertScreen'
+
 const data = [{
   desc: 'Button',
   key: 'Button'
+}, {
+  desc: 'ActionSheet',
+  key: 'ActionSheet'
+}, {
+  desc: 'Alert',
+  key: 'Alert'
 }]
 
 const styles = StyleSheet.create({
@@ -34,7 +44,7 @@ const styles = StyleSheet.create({
 });
 
 class HomeScreen extends Component {
-  render() {
+  render () {
     const { navigation } = this.props
     return (
       <SafeAreaView style={styles.container}>
@@ -79,5 +89,11 @@ export default StackNavigator({
   },
   Button: {
     screen: ButtonScreen
+  },
+  ActionSheet: {
+    screen: ActionSheetScreen
+  },
+  Alert: {
+    screen: AlertScreen
   }
 })

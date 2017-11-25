@@ -1,5 +1,7 @@
-const brandPrimary = '#108ee9';
-const brandPrimaryTap = '#1284d6';
+// const brandPrimary = '#108ee9';
+// const brandPrimaryTap = '#1284d6';
+const brandPrimary = '#f8402f';
+const brandPrimaryTap = '#e31300';
 export default {
     // 支付宝钱包默认主题
     // https://github.com/ant-design/ant-design-mobile/wiki/设计变量表及命名规范
@@ -91,7 +93,8 @@ export default {
     button_height_sm: 23,
     button_font_size_sm: 12,
     primary_button_fill: brandPrimary,
-    primary_button_fill_tap: '#0e80d2',
+    // primary_button_fill_tap: '#0e80d2',
+    primary_button_fill_tap: brandPrimaryTap,
     ghost_button_color: brandPrimary,
     ghost_button_fill_tap: `${brandPrimary}99`,
     warning_button_fill: '#e94f4f',

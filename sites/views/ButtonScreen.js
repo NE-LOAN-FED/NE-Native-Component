@@ -25,11 +25,12 @@ export default class ButtonScreen extends React.Component {
             <Button type="primary">primary</Button><WhiteSpace />
             <Button type="primary" disabled>primary disabled</Button><WhiteSpace />
 
-            <Button type="warning">warning</Button><WhiteSpace />
-            <Button type="warning" disabled>warning disabled</Button><WhiteSpace />
 
             <Button loading>loading button</Button>
-
+            <View style={{ marginTop: 20, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Button style={{ width: '48%' }} type="primary">立即还款</Button>
+              <Button style={{ width: '48%' }}>提前还款</Button>
+            </View>
           </View>
         </SideBlank>
       </SafeAreaView>
