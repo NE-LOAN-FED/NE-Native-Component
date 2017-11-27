@@ -13,6 +13,11 @@ import { SafeAreaView, StackNavigator } from 'react-navigation';
 import ButtonScreen from './views/ButtonScreen'
 import ActionSheetScreen from './views/ActionSheetScreen'
 import AlertScreen from './views/AlertScreen'
+import ToastScreen from './views/ToastScreen'
+import CellsScreen from './views/CellsScreen'
+import TabsScreen from './views/TabsScreen'
+import NoticeBarScreen from './views/NoticeBarScreen'
+import ResultScreen from './views/ResultScreen'
 
 const data = [{
   desc: 'Button',
@@ -23,6 +28,21 @@ const data = [{
 }, {
   desc: 'Alert',
   key: 'Alert'
+}, {
+  desc: 'Toast',
+  key: 'Toast'
+}, {
+  desc: 'Cells',
+  key: 'Cells'
+}, {
+  desc: 'Tabs',
+  key: 'Tabs'
+}, {
+  desc: 'NoticeBar',
+  key: 'NoticeBar'
+}, {
+  desc: 'Result',
+  key: 'Result'
 }]
 
 const styles = StyleSheet.create({
@@ -95,5 +115,20 @@ export default StackNavigator({
   },
   Alert: {
     screen: AlertScreen
+  },
+  Toast: {
+    screen: ToastScreen
+  },
+  Cells: {
+    screen: CellsScreen
+  },
+  Tabs: {
+    screen: TabsScreen
+  },
+  NoticeBar: {
+    screen: NoticeBarScreen
+  },
+  Result: {
+    screen: ResultScreen
   }
 })

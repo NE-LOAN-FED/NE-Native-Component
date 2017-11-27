@@ -748,7 +748,7 @@ babel-register@^6.24.1, babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.0.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+babel-runtime@^6.0.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0, babel-runtime@6.x:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -3293,6 +3293,12 @@ raw-body@~2.1.2:
     iconv-lite "0.4.13"
     unpipe "1.0.0"
 
+rc-gesture@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/rc-gesture/-/rc-gesture-0.0.15.tgz#e9b94ec6854f7c16a3144fc287af79579cbb3796"
+  dependencies:
+    babel-runtime "6.x"
+
 rc@^1.1.7:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.2.tgz#d8ce9cb57e8d64d9c7badd9876c7c34cbe3c7077"
@@ -3662,6 +3668,13 @@ rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@2:
 rimraf@~2.2.6:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
+
+rmc-tabs:
+  version "1.2.19"
+  resolved "https://registry.yarnpkg.com/rmc-tabs/-/rmc-tabs-1.2.19.tgz#7626acf0f0324a6b2dbdc3c5568caa2f4bdbc042"
+  dependencies:
+    babel-runtime "6.x"
+    rc-gesture "^0.0.15"
 
 rn-topview:
   version "0.1.6"
