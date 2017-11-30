@@ -20,6 +20,9 @@ import NoticeBarScreen from './views/NoticeBarScreen'
 import ResultScreen from './views/ResultScreen'
 import PopupScreen from './views/PopupScreen'
 
+import ExampleScreen from './views/ExampleScreen'
+import PaySuccessScreen from './views/subs/PaySuccess'
+
 const data = [{
   desc: 'Button',
   key: 'Button'
@@ -47,6 +50,9 @@ const data = [{
 }, {
   desc: 'Popup',
   key: 'Popup'
+}, {
+  desc: 'Example',
+  key: 'Example'
 }]
 
 const styles = StyleSheet.create({
@@ -137,5 +143,11 @@ export default StackNavigator({
   },
   Popup: {
     screen: PopupScreen
+  },
+  Example: {
+    screen: ExampleScreen
+  },
+  PaySuccess: {
+    screen: PaySuccessScreen
   }
 })

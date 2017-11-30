@@ -9,12 +9,15 @@
   },
   "dependencies": {
     "react": "16.0.0",
-    "react-native": "0.50.1",
+    "react-native": "0.50.3",
     "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.19",
     "rmc-dialog": "^1.0.6",
     "rmc-tabs": "^1.2.19",
     "rn-topview": "^0.1.6"
+  },
+  "resolutions": {
+    "react-native/metro-bundler": "0.20.0"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",

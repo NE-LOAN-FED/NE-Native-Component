@@ -62,3 +62,5 @@ android/local.properties
 android/app/src/main/res/drawable*
 app/*.ipa
 app/*.apk
+
+yarn.lock
