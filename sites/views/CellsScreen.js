@@ -49,6 +49,7 @@ export default class CellsScreen extends React.Component {
             主标题<Brief>副标题</Brief>
           </CellItem>
           <CellItem
+            bordered={false}  
             extra={
               <View>
                 主标题

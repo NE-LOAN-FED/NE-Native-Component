@@ -48,7 +48,7 @@ export default {
     paddingRight: variables.h_spacing_lg,
     paddingVertical: variables.v_spacing_sm,
     minHeight: variables.list_item_height,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    // borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: variables.border_color_base,
   },
   Thumb: {

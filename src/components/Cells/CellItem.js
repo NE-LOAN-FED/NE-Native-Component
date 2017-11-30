@@ -34,7 +34,8 @@ export default class CellItem extends React.Component {
   static defaultProps = {
     multipleLine: false,
     wrap: false,
-    styles: cellStyle
+    styles: cellStyle,
+    bordered: true
   }
   static Brief = Brief
   constructor(props) {
@@ -47,6 +48,7 @@ export default class CellItem extends React.Component {
       styles,
       children,
       multipleLine,
+      bordered,
       thumb,
       extra,
       arrow,
@@ -167,7 +169,15 @@ export default class CellItem extends React.Component {
             <Image source={{ uri: thumb }} style={[itemStyles.Thumb, multipleLine && itemStyles.multipleThumb]} />
           ) : thumb}
         <View
-          style={[itemStyles.Line, multipleLine && itemStyles.multipleLine, multipleLine && alignStyle]}>
+          style={[
+            bordered && {
+              borderBottomWidth: StyleSheet.hairlineWidth
+            },
+            itemStyles.Line,
+            multipleLine && itemStyles.multipleLine,
+            multipleLine && alignStyle,
+
+          ]}>
           {contentDom}
           {extraDom}
           {arrow ? (arrEnum[arrow] || <View style={itemStyles.Arrow} />) : null}

@@ -7,6 +7,7 @@ import Cells from './components/Cells'
 import Tabs from './components/Tabs'
 import NoticeBar from './components/NoticeBar'
 import Result from './components/Result'
+import Popup from './components/Popup'
 
 export {
   Button,
@@ -17,5 +18,6 @@ export {
   Cells,
   Tabs,
   NoticeBar,
-  Result
+  Result,
+  Popup
 }
