@@ -19,6 +19,7 @@ import {
   Cells
 } from '../../src'
 import defaultStyles from '../../src/styles/default'
+import TouchID from 'react-native-touch-id'
 // import PaySuccess from './subs/PaySuccess'
 const URL = 'http://10.242.17.96:9999/#/pay'
 const CellItem = Cells.Item
@@ -118,10 +119,19 @@ export default class Example extends React.PureComponent {
 
                       setTimeout(() => {
                         self.setState({
-                          loading: false,
-                          visible: false
+                          loading: false
                         })
-                        self.goPayResult(self.props.navigation, ResultView.success)
+                        TouchID.authenticate('请确认您的指纹用于白条支付')
+                          .then(success => {
+                            self.setState({
+                              visible: false
+                            })
+                            self.goPayResult(self.props.navigation, ResultView.success)
+                          })
+                          .catch(err => {
+                            alert(err)
+                          })
+                        // self.goPayResult(self.props.navigation, ResultView.success)
                       }, 500)
                     }}
                   >立即付款</Button>

@@ -5,11 +5,13 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "build-ios": "node scripts/bundleMkdir.js && node node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file index.js --bundle-output ios/bundle/index.ios.bundle --assets-dest ios/bundle",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-touch-id": "^3.1.0",
     "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.19",
     "rmc-dialog": "^1.0.6",
