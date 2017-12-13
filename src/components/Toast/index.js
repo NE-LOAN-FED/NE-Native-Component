@@ -105,11 +105,7 @@ class Toast extends React.Component {
       mask
     } = this.props;
     const styles = this.props.styles;
-    // const iconType = {
-    //   success: require('./images/success.png'),
-    //   fail: require('./images/fail.png'),
-    //   offline: require('./images/offline.png'),
-    // };
+
     let iconDom = null;
     if (type === 'loading') {
       iconDom = <ActivityIndicator animating style={[styles.centering]} color="white" size="large" />;

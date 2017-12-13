@@ -18,7 +18,7 @@ export default class NoticeBar extends React.PureComponent {
     styles: NoticeStyle,
     icon:
       (
-        <Image source={require('./images/horn.png')} style={{ width: 14, height: 12 }} />
+        <Image source={require('../../assets/images/horn.png')} style={{ width: 14, height: 12 }} />
       ),
 
 

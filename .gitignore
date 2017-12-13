@@ -64,3 +64,4 @@ app/*.ipa
 app/*.apk
 
 yarn.lock
+lib

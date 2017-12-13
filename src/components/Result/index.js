@@ -14,16 +14,16 @@ function Icon ({ type }) {
   let imageUrl
   switch (type) {
     case 'success':
-      imageUrl = require('./images/success.png')
+      imageUrl = require('../../assets/images/success.png')
       break
     case 'failure':
-      imageUrl = require('./images/failure.png')
+      imageUrl = require('../../assets/images/failure.png')
       break
     case 'processing':
-      imageUrl = require('./images/process.png')
+      imageUrl = require('../../assets/images/process.png')
       break
     default:
-      imageUrl = require('./images/success.png')
+      imageUrl = require('../../assets/images/success.png')
       break
   }
 
