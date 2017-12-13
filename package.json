@@ -1,0 +1,53 @@
+{
+  "name": "ne-native-rc",
+  "description": "ne-native-rc is a components lib made by netease financial group",
+  "version": "0.1.2",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "bundle-ios": "node scripts/bundleMkdir.js && node node_modules/react-native/local-cli/cli.js bundle --platform ios --dev false --entry-file index.js --bundle-output ios/bundle/index.ios.bundle --assets-dest ios/bundle",
+    "test": "jest",
+    "build": "babel src/ -d lib/ && cp -r src/assets lib/",
+    "pub": "npm publish"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-native",
+    "NEF"
+  ],
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "ne-native-rc": "^0.1.1",
+    "react": "16.0.0",
+    "react-native": "0.50.3",
+    "react-native-touch-id": "^3.1.0",
+    "react-native-vector-icons": "^4.4.2",
+    "react-navigation": "^1.0.0-beta.19",
+    "rmc-dialog": "^1.0.6",
+    "rmc-tabs": "^1.2.19",
+    "rn-topview": "^0.1.6"
+  },
+  "resolutions": {
+    "react-native/metro-bundler": "0.20.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-jest": "21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "21.2.1",
+    "react-test-renderer": "16.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
