@@ -16,8 +16,8 @@ import {
   WhiteSpace,
   SideBlank
 
-// } from '../../src'
-} from 'ne-native-rc'
+} from '../../src'
+// } from 'ne-native-rc'
 export default class AlertScreen extends React.Component {
 
   constructor(props) {
